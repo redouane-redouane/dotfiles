@@ -1,4 +1,4 @@
-xrandr --output "eDP1" --auto --output "VGA1" --same-as "eDP1"
+####################################################     System Set Up   ####################################################
 
 archlinux install uefi video: https://www.youtube.com/watch?v=_axWNytXA5E
 archlinux install uefi+lvm video: https://www.youtube.com/watch?v=6syiP5BSQyM&list=PL-odKaUzOz3KKooYv7asc2y7eHTfOs9mA&index=16&t=0s
@@ -7,9 +7,16 @@ swap file config: https://confluence.jaytaala.com/display/TKB/Use+a+swap+file+an
 
 wifi connection: nmtui
 
-Graphviz: cat test.txt | dot -Tpdf >hello.pdf
+manage dotfiles: https://www.atlassian.com/git/tutorials/dotfiles
 
 Boot usb: sudo dd bs=4M if=/path/to/manjaro.iso of=/dev/sd[drive letter] status=progress oflag=sync
+
+xrandr --output "eDP1" --auto --output "VGA1" --same-as "eDP1"
+
+####################################################     ETC            ####################################################
+
+Graphviz: cat test.txt | dot -Tpdf >hello.pdf
+
 
 JAVA multi version: archlinux-java
 
