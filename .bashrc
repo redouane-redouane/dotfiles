@@ -154,3 +154,4 @@ alias gadd='git add'
 alias gcom='git commit -m'
 
 alias ls='ls -l'
+alias lsa='ls -lA'
