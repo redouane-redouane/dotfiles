@@ -147,4 +147,10 @@ ex ()
 }
 
 ########################## Default #############################
-alias config='/usr/bin/git --git-dir=/home/redouane/dotfiles/ --work-tree=/home/redouane'
+
+alias gdot='/usr/bin/git --git-dir=/home/redouane/dotfiles/ --work-tree=/home/redouane'
+alias ginit='git init .'
+alias gadd='git add'
+alias gcom='git commit -m'
+
+alias ls='ls -l'
