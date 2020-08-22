@@ -1,0 +1,66 @@
+xrandr --output "eDP1" --auto --output "VGA1" --same-as "eDP1"
+
+archlinux install uefi video: https://www.youtube.com/watch?v=_axWNytXA5E
+archlinux install uefi+lvm video: https://www.youtube.com/watch?v=6syiP5BSQyM&list=PL-odKaUzOz3KKooYv7asc2y7eHTfOs9mA&index=16&t=0s
+
+swap file config: https://confluence.jaytaala.com/display/TKB/Use+a+swap+file+and+enable+hibernation+on+Arch+Linux+-+including+on+a+LUKS+root+partition#UseaswapfileandenablehibernationonArchLinuxincludingonaLUKSrootpartition-Makingswappersistent
+
+wifi connection: nmtui
+
+Graphviz: cat test.txt | dot -Tpdf >hello.pdf
+
+Boot usb: sudo dd bs=4M if=/path/to/manjaro.iso of=/dev/sd[drive letter] status=progress oflag=sync
+
+JAVA multi version: archlinux-java
+
+PYTHON multi version: pyenv activate MiniProjet
+
+LAMP: root folder: /srv/http
+      systemctl start httpd
+      systemctl start mariadb
+      localhost:80/phpmyadmin
+
+Docker:  
+        # start docker service
+                 
+        
+        # start map server: 
+
+        # Launch a 18.04 based image (https://hub.docker.com/r/mattrayner/lamp):
+
+        # Launch neo4j (https://neo4j.com/developer/docker-run-neo4j/):
+
+        # stop servers
+
+                    systemctl start docker
+                    sudo docker run --name maps -it -d -v /home/redouane/Documents/Informatique/PFE:/data -p 9090:80 klokantech/openmaptiles-server
+
+                    sudo docker run --name lamp -d -p "80:80" -v ${PWD}/app:/app mattrayner/lamp:latest-1804
+                    #sudo docker run --name lamp1804 -i -t -d -p "80:80" -v /home/cmp_lmto/Bureau/PFE_CMP/Data/app:/app -v /home/cmp_lmto/Bureau/PFE_CMP/Data/mysql:/var/lib/mysql mattrayner/lamp:latest-1804
+
+                    sudo docker run \
+                        --name neo4j \
+                        -p7474:7474 -p7687:7687 \
+                        -d \
+                        -v /home/redouane/Documents/Informatique/PFE/neo4j/data:/data \
+                        -v /home/redouane/Documents/Informatique/PFE/neo4j/logs:/logs \
+                        -v /home/redouane/Documents/Informatique/PFE/neo4j/import:/var/lib/neo4j/import \
+                        -v /home/redouane/Documents/Informatique/PFE/neo4j/plugins:/plugins \
+                        --env NEO4J_AUTH=neo4j/test \
+                        neo4j:latest
+
+------------------------------------------------------------------------------------------------------------------------
+                    systemctl start docker
+                    sudo docker start maps
+                    sudo docker start lamp
+                    sudo docker start neo4j
+                    sudo docker ps -a
+
+                    sudo docker exec --interactive --tty <container> bin/cypher-shell
+                    sudo docker exec --interactive --tty <container> bin/neo4j-admin
+
+                    sudo docker stop maps
+                    sudo docker stop lamp
+                    sudo docker stop neo4j
+                    sudo docker ps -a
+                    systemctl stop docker
