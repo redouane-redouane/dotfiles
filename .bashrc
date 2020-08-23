@@ -148,10 +148,21 @@ ex ()
 
 ########################## Default #############################
 
+alias pacs='sudo pacman -S'
+alias pacss='sudo pacman -Ss'
+alias pacu='sudo pacman -Syu'
+alias pacr='sudo pacman -R'
+alias pacq='sudo pacman -Q'
+alias pacq='sudo pacman -Qs'
+
 alias gdot='/usr/bin/git --git-dir=/home/redouane/dotfiles/ --work-tree=/home/redouane'
+alias gdota='/usr/bin/git --git-dir=/home/redouane/dotfiles/ --work-tree=/home/redouane add'
+alias gdotc='/usr/bin/git --git-dir=/home/redouane/dotfiles/ --work-tree=/home/redouane commit -m'
+alias gdotp='/usr/bin/git --git-dir=/home/redouane/dotfiles/ --work-tree=/home/redouane push redouane master'
+
 alias ginit='git init .'
 alias gadd='git add'
 alias gcom='git commit -m'
 
-alias ls='ls -l'
-alias lsa='ls -lA'
+alias ll='ls -l'
+alias la='ls -lA'
