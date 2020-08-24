@@ -66,6 +66,7 @@ keys = [
     Key([mod], "n", lazy.spawn("nemo")),
     Key([mod], "d", lazy.spawn("dmenu_run")),
     Key([mod], "v", lazy.spawn("virtualbox")),
+    Key([mod], "t", lazy.spawn("sh /home/redouane/.config/qtile/launchtor.sh")),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout()),
