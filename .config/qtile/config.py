@@ -147,7 +147,7 @@ screens = [
                 widget.Sep(foreground='00ffff'),
                 
                 widget.Image(length=10, width=25, filename="~/Pictures/layout.jpg"),
-                widget.KeyboardLayout(foreground='00afff', configured_keyboards=['fr','ar']),
+                widget.KeyboardLayout(foreground='00afff', configured_keyboards=['fr','ar','ru']),
                 widget.Sep(foreground='00ffff'),
                 widget.Image(length=10, width=25, filename="~/Pictures/volume.jpg"),
                 widget.Volume(foreground='ffff00'),
