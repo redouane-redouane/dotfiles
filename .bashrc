@@ -4,6 +4,9 @@
 
 export JAVA_HOME=/lib/jvm/default
 export PATH=/lib/jvm/default/bin:$PATH
+export PATH=/home/redouane/Work/convoy/janusgraph-0.5.2/conf:$PATH
+export PATH=/home/redouane/Work/convoy/apache-cassandra-3.11.0/conf:$PATH
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/redouane/Work/lib/opencv/build/lib"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 

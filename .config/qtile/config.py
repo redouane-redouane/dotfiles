@@ -41,6 +41,13 @@ def autostart():
 
 mod = "mod4"
 
+@hook.subscribe.client_new
+def floating_dialogs(window):
+    dialog = window.window.get_wm_type() == 'dialog'
+    transient = window.window.get_wm_transient_for()
+    if dialog or transient:
+        window.floating = True
+
 keys = [
     # Switch between windows in current stack pane
     Key([mod], "Right", lazy.layout.down()),

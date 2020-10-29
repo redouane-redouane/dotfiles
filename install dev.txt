@@ -1,3 +1,9 @@
+####################################################     Site Set Up     ####################################################
+dbname = id15096363_tracker_db
+user = root
+password = l&mM#I168~YU>J+^
+
+
 ####################################################     System Set Up   ####################################################
 
 archlinux install uefi video: https://www.youtube.com/watch?v=_axWNytXA5E
