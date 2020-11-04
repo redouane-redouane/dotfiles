@@ -169,3 +169,10 @@ alias gcom='git commit -m'
 
 alias ll='ls -l'
 alias la='ls -lA'
+
+if [ -f `which powerline-daemon` ]; then
+  powerline-daemon -q
+  POWERLINE_BASH_CONTINUATION=1
+  POWERLINE_BASH_SELECT=1
+  . /usr/share/powerline/bindings/bash/powerline.sh
+fi
