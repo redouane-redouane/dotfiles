@@ -68,7 +68,8 @@ keys = [
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split()),
-    Key([mod], "Return", lazy.spawn("gnome-terminal")),
+    # Key([mod], "Return", lazy.spawn("gnome-terminal")),
+    Key([mod], "Return", lazy.spawn("st")),
     Key([mod], "w", lazy.spawn("firefox")),
     Key([mod], "n", lazy.spawn("nemo")),
     Key([mod], "d", lazy.spawn("dmenu_run")),
